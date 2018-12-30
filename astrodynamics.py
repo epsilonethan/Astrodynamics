@@ -18,7 +18,12 @@ import numpy as np
 #2. The rate of change of momentum is proportional to the force impressed and is in the same direction as that force
 #3. To every action there is always opposed an equal reaction
 
-#class M_object():
+class M_object():
+    def __init__(self, pos, vel, mass):
+        self.pos = pos
+        self.vel = vel
+        self.mass = mass
+
 
 '''
 class Vector(np.ndarray):
@@ -35,16 +40,35 @@ class Vector(np.ndarray):
     # Start filling in vector functions here
 '''
 
-def f_grav(m1, m2, pos1, pos2):
-    r_vec = pos2 - pos1
+# n-body force of gravity
+def f_grav(body1, body2):
+    r_vec = body2.pos - body1.pos
     r = math.sqrt(r_vec[0]**2 + r_vec[1]**2 + r_vec[2]**2)
-    f_g_vec = -(G*m1*m2*r_vec)/(r**3)
+    f_g_vec = -(G*body1.mass*body2.mass*r_vec)/(r**3)
     f_g_mag = math.sqrt(f_g_vec[0]**2 + f_g_vec[1]**2 + f_g_vec[2]**2)
 
-    print(r_vec)
-    print(r)
-    print(f_g_vec)
-    print(f_g_mag)
+    #print(r_vec)
+    #print(r)
+    #print(f_g_vec)
+    #print(f_g_mag)
+
+    return f_g_vec
+
+def f_grav_n(*args, ref=0):
+    ref_body = args[ref]
+    list_args = []
+
+    for arg in args:
+        list_args.append(arg)
+
+    list_args.remove(ref_body)
+    f_g_n_vec = np.array((0.0, 0.0, 0.0))
+
+    for body in list_args:
+        f_g_vec = f_grav(ref_body, body)
+        f_g_n_vec += f_g_vec
+
+    return f_g_n_vec
 
 
 # TESTING
@@ -52,6 +76,14 @@ if __name__ == "__main__":
     G = 6.67408 * 10**-11  # m^3/(kg*s^2)
     m1 = 5.972 * 10**24  # kg Mass of Earth
     m2 = 150.0
+    m3 = 200.0
+    vel1 = np.array((0.0, 0.0, 0.0))
+    vel2 = np.array((0.0, 0.0, 0.0))
+    vel3 = np.array((0.0, 0.0, 0.0))
     pos1 = np.array((0.0, 0.0, 0.0))
     pos2 = np.array((0.0, 0.0, 6378000.0))
-    f_grav(m1, m2, pos1, pos2)
+    pos3 = np.array((0.0, 2.0, 6378002.0))
+    body1 = M_object(pos1, vel1, m1)
+    body2 = M_object(pos2, vel2, m2)
+    body3 = M_object(pos3, vel3, m3)
+    print(f_grav_n(body1, body2, body3, ref=0))
