@@ -70,6 +70,14 @@ def f_grav_n(*args, ref=0):
 
     return f_g_n_vec
 
+def a_grav(f_grav_vec, body):
+    a_grav_vec = f_grav_vec/body.mass
+    return a_grav_vec
+
+def specific_anglular_momentum(pos_vec, vel_vec):
+    return np.cross(pos_vec, vel_vec)
+
+
 
 # TESTING
 if __name__ == "__main__":
@@ -86,4 +94,6 @@ if __name__ == "__main__":
     body1 = M_object(pos1, vel1, m1)
     body2 = M_object(pos2, vel2, m2)
     body3 = M_object(pos3, vel3, m3)
-    print(f_grav_n(body1, body2, body3, ref=0))
+    force = f_grav_n(body1, body2, body3, ref=0)
+    print(force)
+    print(a_grav(force, body1))
