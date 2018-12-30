@@ -2,6 +2,7 @@ import math
 import sys
 import os
 import numpy as np
+import vector_functions as vf
 
 
 #========================
@@ -40,12 +41,13 @@ class Vector(np.ndarray):
     # Start filling in vector functions here
 '''
 
+
 # n-body force of gravity
 def f_grav(body1, body2):
     r_vec = body2.pos - body1.pos
-    r = math.sqrt(r_vec[0]**2 + r_vec[1]**2 + r_vec[2]**2)
+    r = vf.magnitude(r_vec)
     f_g_vec = -(G*body1.mass*body2.mass*r_vec)/(r**3)
-    f_g_mag = math.sqrt(f_g_vec[0]**2 + f_g_vec[1]**2 + f_g_vec[2]**2)
+    f_g_mag = vf.magnitude((f_g_vec))
 
     #print(r_vec)
     #print(r)
@@ -75,8 +77,9 @@ def a_grav(f_grav_vec, body):
     return a_grav_vec
 
 def specific_anglular_momentum(pos_vec, vel_vec):
-    return np.cross(pos_vec, vel_vec)
-
+    spec_ang_mom = np.cross(pos_vec, vel_vec)
+    spec_ang_mom_mag = vf.magnitude(spec_ang_mom)
+    return spec_ang_mom
 
 
 # TESTING
