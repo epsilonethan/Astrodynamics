@@ -83,7 +83,7 @@ if __name__ == "__main__":
     vel3 = np.array((0.0, 0.0, 0.0))
     pos1 = np.array((0.0, 0.0, 0.0))
     pos2 = np.array((0.0, 0.0, 6378000.0))
-    pos3 = np.array((0.0, 2.0, 6378003.0))
+    pos3 = np.array((0.0, 2.0, 6378002.0))
     body1 = M_object(pos1, vel1, m1)
     body2 = M_object(pos2, vel2, m2)
     body3 = M_object(pos3, vel3, m3)

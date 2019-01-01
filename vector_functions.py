@@ -3,7 +3,6 @@ import sys
 import os
 import numpy as np
 
-#Magnitude of vector
 def magnitude(vector):
     a = 0
     for val in vector:
@@ -33,3 +32,25 @@ def vec_angle(vec1, vec2):
 
 def vec_cross(vec1, vec2):
     return np.cross(vec1, vec2)
+
+def vec_to_polar(vec):
+    if len(vec) == 3:
+        r = magnitude(vec)
+        theta = math.acos(vec[2]/r)
+        azimuth = math.atan(vec[1]/vec[0])
+        return r, theta, azimuth
+    elif len(vec) == 2:
+        r = magnitude(vec)
+        theta = math.acos(vec[1] / r)
+        return r, theta
+
+def vec_to_cart(vec):
+    if len(vec) == 3:
+        x = vec[0]*math.sin(vec[1])*math.cos(vec[2])
+        y = vec[0]*math.sin(vec[1])*math.sin(vec[2])
+        z = vec[0]*math.cos(vec[1])
+        return x, y, z
+    elif len(vc) == 2:
+        x = vec[0]*math.cos(vec[1])
+        y = vec[0]*math.sin(vec[1])
+        return x, y
