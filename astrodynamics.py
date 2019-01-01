@@ -41,40 +41,32 @@ class Vector(np.ndarray):
     # Start filling in vector functions here
 '''
 
+#Kinematic equations
+def position(posi, vel, a, t_del):
+    return vel*t_del + .5*a*(t_del**2) + posi
+
+def velocity(vel, a, t_del):
+    return vel + a*t_del
 
 # n-body force of gravity
-def f_grav(body1, body2):
-    r_vec = body2.pos - body1.pos
-    r = vf.magnitude(r_vec)
-    f_g_vec = -(G*body1.mass*body2.mass*r_vec)/(r**3)
-    f_g_mag = vf.magnitude((f_g_vec))
+def f_grav_vec(body1, body2):
+    return -(G*body1.mass*body2.mass*(body2.pos-body1.pos))/((vf.magnitude(body2.pos - body1.pos))**3)
 
-    #print(r_vec)
-    #print(r)
-    #print(f_g_vec)
-    #print(f_g_mag)
-
-    return f_g_vec
-
-def f_grav_n(*args, ref=0):
+def f_grav_vec_n(*args, ref=0):
     ref_body = args[ref]
-    list_args = []
-
-    for arg in args:
-        list_args.append(arg)
+    list_args = list(args)
 
     list_args.remove(ref_body)
     f_g_n_vec = np.array((0.0, 0.0, 0.0))
 
     for body in list_args:
-        f_g_vec = f_grav(ref_body, body)
+        f_g_vec = f_grav_vec(ref_body, body)
         f_g_n_vec += f_g_vec
 
     return f_g_n_vec
 
 def a_grav(f_grav_vec, body):
-    a_grav_vec = f_grav_vec/body.mass
-    return a_grav_vec
+    return f_grav_vec/body.mass
 
 def specific_anglular_momentum(pos_vec, vel_vec):
     return vf.vec_cross(pos_vec, vel_vec)
@@ -95,6 +87,6 @@ if __name__ == "__main__":
     body1 = M_object(pos1, vel1, m1)
     body2 = M_object(pos2, vel2, m2)
     body3 = M_object(pos3, vel3, m3)
-    force = f_grav_n(body1, body2, body3, ref=0)
+    force = f_grav_vec_n(body1, body2, body3, ref=0)
     print(force)
     print(a_grav(force, body1))
