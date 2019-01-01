@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="67940094-107d-4807-9dc7-aed0e17fb1a8" name="Default Changelist" comment="">
+    <list default="true" id="67940094-107d-4807-9dc7-aed0e17fb1a8" name="Default Changelist" comment="Updated file extension">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/astrodynamics.py" beforeDir="false" afterPath="$PROJECT_DIR$/astrodynamics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/vector_functions.py" beforeDir="false" afterPath="$PROJECT_DIR$/vector_functions.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -12,11 +14,28 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/astrodynamics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="19" column="61" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
+            <state relative-caret-position="122">
+              <caret line="78" column="49" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
+              <folding>
+                <element signature="e#84#109#0" />
+                <element signature="e#916#1338#1" />
+                <element signature="e#1397#1639#0" />
+                <element signature="e#1673#1958#0" />
+                <element signature="e#1994#2049#0" />
+                <element signature="e#2105#2222#0" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/vector_functions.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -40,6 +59,7 @@
       <list>
         <option value="$PROJECT_DIR$/vector_functions" />
         <option value="$PROJECT_DIR$/astrodynamics.py" />
+        <option value="$PROJECT_DIR$/vector_functions.py" />
       </list>
     </option>
   </component>
@@ -157,11 +177,26 @@
       <option name="project" value="LOCAL" />
       <updated>1546211937265</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Updated file extension">
+      <created>1546320164029</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1546320164029</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Updated file extension">
+      <created>1546320226804</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1546320226804</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14626391" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -174,9 +209,9 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3285968" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.5007949" side_tool="true" weight="0.25399646" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Python Console" order="10" weight="0.3285968" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -186,14 +221,30 @@
     <MESSAGE value="Updated from 2-body to n-body F_grav function. Added M_object class." />
     <MESSAGE value="Added functions for acceleration and specific angular momentum" />
     <MESSAGE value="Added vector_functions module to hold vector operations." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added vector_functions module to hold vector operations." />
+    <MESSAGE value="Updated file extension" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated file extension" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/modules/vector_functions" />
     <entry file="file://$PROJECT_DIR$/astrodynamics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="19" column="61" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
+        <state relative-caret-position="122">
+          <caret line="78" column="49" selection-start-line="78" selection-start-column="49" selection-end-line="78" selection-end-column="49" />
+          <folding>
+            <element signature="e#84#109#0" />
+            <element signature="e#916#1338#1" />
+            <element signature="e#1397#1639#0" />
+            <element signature="e#1673#1958#0" />
+            <element signature="e#1994#2049#0" />
+            <element signature="e#2105#2222#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/vector_functions.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="34" column="29" selection-start-line="34" selection-start-column="29" selection-end-line="34" selection-end-column="29" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
           </folding>

@@ -77,9 +77,7 @@ def a_grav(f_grav_vec, body):
     return a_grav_vec
 
 def specific_anglular_momentum(pos_vec, vel_vec):
-    spec_ang_mom = np.cross(pos_vec, vel_vec)
-    spec_ang_mom_mag = vf.magnitude(spec_ang_mom)
-    return spec_ang_mom
+    return vf.vec_cross(pos_vec, vel_vec)
 
 
 # TESTING
