@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="67940094-107d-4807-9dc7-aed0e17fb1a8" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/vector_functions" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/astrodynamics.py" beforeDir="false" afterPath="$PROJECT_DIR$/astrodynamics.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,31 +12,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/astrodynamics.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="476">
-              <caret line="83" selection-start-line="83" selection-end-line="83" />
+            <state relative-caret-position="323">
+              <caret line="19" column="61" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
-                <element signature="e#54#79#0" />
-                <element signature="e#823#1245#1" />
-                <element signature="e#1345#1651#0" />
-                <element signature="e#1682#1892#0" />
-                <element signature="e#2027#2082#0" />
-                <element signature="e#2138#2203#0" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/vector_functions">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-              <folding>
-                <element signature="e#101#174#0" />
               </folding>
             </state>
           </provider>
@@ -74,6 +54,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -85,12 +66,24 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/modules" />
+    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
+  </component>
+  <component name="PyConsoleOptionsProvider">
+    <option name="myPythonConsoleState">
+      <console-settings module-name="Astrodynamics" sdk-home="C:\Users\ethan\AppData\Local\Programs\Python\Python36-32\python.exe">
+        <option name="mySdkHome" value="C:\Users\ethan\AppData\Local\Programs\Python\Python36-32\python.exe" />
+        <option name="myModuleName" value="Astrodynamics" />
+      </console-settings>
+    </option>
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ethan\Astrodynamics\modules" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -157,12 +150,18 @@
       <option name="project" value="LOCAL" />
       <updated>1546208855881</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Added vector_functions module to hold vector operations.">
+      <created>1546211937265</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1546211937265</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14626391" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -186,31 +185,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated from 2-body to n-body F_grav function. Added M_object class." />
     <MESSAGE value="Added functions for acceleration and specific angular momentum" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added functions for acceleration and specific angular momentum" />
+    <MESSAGE value="Added vector_functions module to hold vector operations." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added vector_functions module to hold vector operations." />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/modules/vector_functions" />
     <entry file="file://$PROJECT_DIR$/astrodynamics.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="83" selection-start-line="83" selection-end-line="83" />
+        <state relative-caret-position="323">
+          <caret line="19" column="61" selection-start-line="19" selection-start-column="61" selection-end-line="19" selection-end-column="61" />
           <folding>
             <element signature="e#0#11#0" expanded="true" />
-            <element signature="e#54#79#0" />
-            <element signature="e#823#1245#1" />
-            <element signature="e#1345#1651#0" />
-            <element signature="e#1682#1892#0" />
-            <element signature="e#2027#2082#0" />
-            <element signature="e#2138#2203#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vector_functions">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-          <folding>
-            <element signature="e#101#174#0" />
           </folding>
         </state>
       </provider>
