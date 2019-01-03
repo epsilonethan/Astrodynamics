@@ -21,7 +21,7 @@ def vec_norm(vec):
 
 def vec_dot(vec1, vec2):
     a = 0
-    for i in len(vec1):
+    for i in range(len(vec1)):
         a += vec1[i]*vec2[i]
     return a
 

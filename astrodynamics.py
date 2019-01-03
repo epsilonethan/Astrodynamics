@@ -3,6 +3,7 @@ import sys
 import os
 import numpy as np
 import vector_functions as vf
+import constants as cn
 
 
 #========================
@@ -48,10 +49,11 @@ def position(posi, vel, a, t_del):
 def velocity(vel, a, t_del):
     return vel + a*t_del
 
-# n-body force of gravity
 def f_grav_vec(body1, body2):
-    return -(G*body1.mass*body2.mass*(body2.pos-body1.pos))/((vf.magnitude(body2.pos - body1.pos))**3)
+    return -(cn.G*body1.mass*body2.mass*(body2.pos-body1.pos))/((vf.magnitude(body2.pos - body1.pos))**3)
 
+'''
+# n-body force of gravity
 def f_grav_vec_n(*args, ref=0):
     ref_body = args[ref]
     list_args = list(args)
@@ -64,29 +66,29 @@ def f_grav_vec_n(*args, ref=0):
         f_g_n_vec += f_g_vec
 
     return f_g_n_vec
-
+'''
 def a_grav(f_grav_vec, body):
     return f_grav_vec/body.mass
 
 def specific_anglular_momentum(pos_vec, vel_vec):
     return vf.vec_cross(pos_vec, vel_vec)
 
+def eccentricity_vec(body1, body2):
+    return ((vf.magnitude(body2.vel))**2 - (cn.G * (body1.mass + body2.mass))/vf.magnitude(body2.pos))*body2.pos \
+           - (vf.vec_dot(body2.pos, body2.vel)) * body2.vel
+
 
 # TESTING
 if __name__ == "__main__":
-    G = 6.67408 * 10**-11  # m^3/(kg*s^2)
     m1 = 5.972 * 10**24  # kg Mass of Earth
     m2 = 150.0
-    m3 = 200.0
     vel1 = np.array((0.0, 0.0, 0.0))
-    vel2 = np.array((0.0, 0.0, 0.0))
-    vel3 = np.array((0.0, 0.0, 0.0))
+    vel2 = np.array((100.0, 0.0, 0.0))
     pos1 = np.array((0.0, 0.0, 0.0))
     pos2 = np.array((0.0, 0.0, 6378000.0))
-    pos3 = np.array((0.0, 2.0, 6378002.0))
     body1 = M_object(pos1, vel1, m1)
     body2 = M_object(pos2, vel2, m2)
-    body3 = M_object(pos3, vel3, m3)
-    force = f_grav_vec_n(body1, body2, body3, ref=0)
-    print(force)
-    print(a_grav(force, body1))
+    force = f_grav_vec(body1, body2)
+    ecc = eccentricity_vec(body1, body2)
+    print(ecc)
+    #print(a_grav(force, body1))
